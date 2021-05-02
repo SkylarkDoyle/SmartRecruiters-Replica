@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This is a website application that helps during job search">
+  <title>SmartRecruiters</title>
+  <link rel="shortcut icon" href="img/smartrecruiters_bulb_fav.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="search.css">
+</head>
+<body>
+    <div class="sticky">
+      <a href="">Feedback</a>
+  </div>
+
+
+    <div class="search-wrapper">
+    <!-- start of search page nav bar -->
+      <div class="search-header">
+        <a href="home.html" class="search-logo">
+          <img src="img/smartrecruiters_bulb.png" class="icon-logo"> 
+          <img src="img/smartrecruiters_medium.png" class="text-logo"></a>
+          <ul class="search-links">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="search.html" class="active-page">Search</a></li>
+              <li><a href="job.html">My Jobs</a></li>
+          </ul>
+        <div class="search-nav-links">
+                 <img src="img/bell.png" class="bellImg" onclick="bellToggle()">
+                 <div class="notification">
+                   <div class="bell-logo"></div>
+                      <p class="notification-header">No notifications</p>
+                      <p class="notification-text">We'll notify you when a matching job arrives!</p>
+                 </div>
+
+            <div class="search-header-user" onclick="searchToggle()">
+                 <img src="img/avatar-placeholder.png">
+                 <p class="username">Olalekan Adebari</p>
+                 <img src="img/down-arrow.png" class="d-arr">
+                 <div class="user-search">
+                   <h4>Olalekan Adebari</h4>
+                   <p>adebari.olalekan.oluwaseun@gmail.com</p>
+                   <a href="profile.html" class="user-smart-link">My SmartProfile</a>
+                   <ul>
+                     <li><a href="">Smart Job Search <span>NEW</span></a></li>
+                     <li class="hidden"><a href="search.html">Search</a></li>
+                     <li class="hidden"><a href="job.html">My Jobs</a></li>
+                     <li><a href="">Jobseeker Guide</a></li>
+                     <li><a href="settings.html">Settings</a></li>
+                     <li><a href="sign-in.html">Logout</a></li>
+                   </ul>
+                 </div>
+            </div>
+        </div>
+      </div>
+<!-- end of search page nav bar -->
+         <div class="search-bar-container">
+           <form class="search-bar">
+               <input type="text" name="search" placeholder="Search">
+               <input type="text" name="loc" placeholder="Location">
+               <input type="button" name="tof" value="Type of employment" onclick="listOfEmp()" class="tof">
+               <ul class="list-of-emp">
+                 <li>Full-time</li>
+                 <li>Part-time</li>
+                 <li>Intern</li>
+                 <li>Contract</li>
+               </ul>
+           </form>
+              <p class="search-bar-btn">Find my next job</p>
+         </div>
+    <div class="smart-profile">
+      <div class="smart-profile-text">
+        <p>Keep your SmartProfile up to date to get the best job recommendations.</p>
+      <h4>Your SmartProfile is 45% complete</h4>    
+      <div class="progress">
+          <div class="completion remain"></div>
+      </div>
+         <span>45%</span>
+          </div>  
+          <div class="smart-profile-btn">
+            <a href="profile.html">Update my SmartProfile</a>
+          </div>
+      
+ </div>
+
+
+
+        </div>
+    
+
+
+
+
+
+ 
+
+<nav class="bottom-nav">
+
+    <div class="home">
+      <img src="img/home-icon.png">
+       <a href="home.html">Home</a>
+    </div>
+
+<div class="search">
+  <img src="img/search-icon.png">
+  <a href="search.html">Search</a>
+</div>
+
+ <div class="job">
+  <img src="img/work-icon.png">
+  <a href="job.html">My Jobs</a>
+</div>
+
+  <div class="s-prof" class="active-page">
+  <img src="img/profile-icon.png">
+  <a href="profile.html">SmartProfile</a>
+  </div>
+
+</nav>
+
+
+<script type="text/javascript" src="search.js"></script>
+
+
+
+
+   
+</body>
+</html>

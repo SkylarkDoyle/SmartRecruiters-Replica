@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This is a website application that helps during job search">
+	<title>SmartRecruiters</title>
+	<link rel="shortcut icon" href="img/smartrecruiters_bulb_fav.png">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="profile.css">
+</head>
+<body>
+    <div class="sticky">
+      <a href="">Feedback</a>
+  </div>
+
+
+    <div class="profile-wrapper">
+    <!-- start of profile page nav bar -->
+    	<div class="profile-header">
+    		<a href="home.html" class="profile-logo">
+    			<img src="img/smartrecruiters_bulb.png" class="icon-logo"> 
+    			<img src="img/smartrecruiters_medium.png" class="text-logo"></a>
+          <ul class="profile-links">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="job.html">My Jobs</a></li>
+          </ul>
+    		<div class="profile-nav-links">
+                 <img src="img/bell.png" class="bellImg" onclick="bellToggle()">
+                 <div class="notification">
+                   <div class="bell-logo"></div>
+                      <p class="notification-header">No notifications</p>
+                      <p class="notification-text">We'll notify you when a matching job arrives!</p>
+                 </div>
+
+            <div class="profile-header-user" onclick="profileToggle()">
+                 <img src="img/avatar-placeholder.png">
+                 <p class="username">Olalekan Adebari</p>
+                 <img src="img/down-arrow.png" class="d-arr">
+                 <div class="user-profile">
+                   <h4>Olalekan Adebari</h4>
+                   <p>adebari.olalekan.oluwaseun@gmail.com</p>
+                   <a href="profile.html" class="user-smart-link">My SmartProfile</a>
+                   <ul>
+                     <li><a href="">Smart Job Search <span>NEW</span></a></li>
+                     <li class="hidden"><a href="search.html">Search</a></li>
+                     <li class="hidden"><a href="job.html">My Jobs</a></li>
+                     <li><a href="">Jobseeker Guide</a></li>
+                     <li><a href="settings.html">Settings</a></li>
+                     <li><a href="sign-in.html">Logout</a></li>
+                   </ul>
+                 </div>
+            </div>
+    		</div>
+    	</div>
+  	<!-- end of profile page nav bar -->
+ <div class="profile-bg"></div>
+    <div class="profile-div">
+      <div class="profile-img">
+         <img src="img/avatar-placeholder.png">
+         <div class="profile-img-icon">
+          <img src="img/pencil.png" id="profile-pencil" onmouseover="profilePenSugg()">
+          <p id="prof-pen-sugg">Update profile photo</p>
+         </div>
+      </div>
+       <div class="profile-text">
+       <h2>Olalekan Adebari</h2>
+       <div class="title-suggestion">
+         <p>Add a title (such as 'Product Designer' or 'Sales Consulant')
+            to describe your experience or the role you're looking for.
+          </p>
+       </div>
+       <div class="pro-title">
+          <a href="#prof">Add a Professional Title</a>
+          <img class="info" src="img/blue-info.png" onmouseover="infoTitleHover()">
+       </div>
+      
+    </div>
+     <a href="" class="profile-div-share">Share</a>
+  </div>
+
+<div class="update-div">
+  <p><img src="img/black-info.png">Would you like to update the companies you applied to with recent changes?</p>
+  <div class="update-btn">
+     <a href="" class="update-btn-no">No</a>
+     <a href="" class="update-btn-yes">Yes</a>
+  </div>
+</div>
+
+  <div class="profile-wrapper-two">
+    <div class="profile-completeness">
+       <h4>Profile completeness</h4>
+       <div class="progress">
+          <div class="completion remain"></div>
+      </div>
+         <span>45%</span>
+         <div class="parsing">
+          <img src="img/parsing.png">
+          <p>Drop your resume here to quickly build <strong>SmartProfile</strong></p>
+         </div>
+    </div>
+
+<div class="information">
+   <div class="personal-info">
+    <div class="personal-info-links">
+         <p class="link-one" onclick="removePILinksAndForm()">Cancel</p>
+        <p class="link-two">Save</p>
+    </div>
+    <div class="personal-info-title">
+    <h3>Personal Information</h3>
+    <div class="pencil" onclick="displayPILinksAndForm()" onmouseover="pInfoPenSugg()"></div>
+    <p id="p-info-pen-sugg">Edit</p>
+  </div>
+     <div class="personal-details">
+     <p><img src="img/email-icon.png">adebari.olalekan.oluwaseun@gmail.com</p>
+     <p><img src="img/marker-icon.png">Lagos, Nigeria</p>
+     <p><img src="img/phone-icon.png">+2348129014778</p>
+     <div class="info-social-links">
+        <h2>Social Links</h2>
+        <img src="img/linkedin-icon.jpg">
+        <img src="img/world-icon.png">
+     </div>
+      <div class="remote-job">
+        <p>Open to remote work</p>
+        <img src="img/toggle-off.png" class="remote-job-img" onclick="remoteJobToggler()">
+      </div> 
+     </div>
+     <form class="personal-info-form">
+       <label for="first">First name</label>
+       <input type="text" name="first" value="Olalekan" class="completed">
+       <label for="last">Last Name</label>
+       <input type="text" name="last" value="Adebari" class="completed">
+       <label for="prof-title">Professional Title</label>
+       <input type="text" name="prof-title" id="prof" placeholder="Enter a professional title">
+       <label for="location"></label>
+       <input type="text" name="location" value="Lagos, Nigeria" class="completed">
+       <!--  <div class="info-option">
+          <p>Please enter at least 3 characters</p>
+       </div> -->
+       <label for="tel">Phone number</label>
+       <input type="tel" name="tel" value="812 901 4778" class="completed">
+       <h4>Social links</h4>
+       <input type="text" value="https://www.linkedin.com/in/olalekan-adebari-41907b9a/" class="completed">
+       <input type="text" placeholder="Your Facebook Profile">
+       <input type="text" placeholder="Your Twitter Profile">
+       <input type="text" value="https://github.com/horlahlekhon" class="completed">
+   </form>
+</div>
+  
+
+</div>
+
+
+<div class="about-me">
+  <div class="about-me-links">
+         <p class="link-one" onclick="removeLinksAndForm()">Cancel</p>
+        <p class="link-two">Save</p>
+    </div>
+    <div class="about-me-suggestion">
+      <p>Add 2-3 sentences about your overall professional experience</p>
+    </div>
+   <h2>About me <img src="img/black-info.png" class="about-info-icon" onmouseover="aboutInfoHover()"></h2>
+   <div class="pencil" onclick="displayLinksAndForm()" onmouseover="aboutMePenInfo()"></div>
+   <div class="pencil-info"><p>Edit</p></div>
+   <form class="about-me-form">
+       <textarea placeholder="Enter your overall professional experience"></textarea>
+       <p>500 maximum characters.</p>
+   </form>
+</div>
+
+<div class="exp">
+    <p class="add-exp" onclick="displayExpForm()"><span>+</span>Add</p>
+  <h2>Experience</h2>
+     <div class="exp-form">
+  <div class="job-img"></div>
+  <form>
+    <label for="title">Title <span>*</span></label>
+
+     <input type="text" name="title" class="non-empty" onclick="nonEmpty()">
+     <p class="error-msg">Please provide non empty value for this field.</p>
+     <label for="company">Company</label>
+     <input type="text" name="company">
+     <label for="location">Location</label>
+     <input type="text" name="location">
+     <label for="description">Description</label>
+     <textarea name="description"></textarea>
+     <label for="from">From <span>*</span></label>
+     <input type="date" name="from">
+     <label for="to">To <span>*</span></label>
+     <input type="date" name="to">
+     <label for="check" class="check">
+      <input type="checkbox" name="check">
+      <span>I currently work here</span></label>
+       <div class="exp-update-btn">
+     <p class="exp-update-btn-no" onclick="removeExpForm()">Cancel</p>
+     <p class="exp-update-btn-yes">Save</p>
+  </div>
+     
+  </form>
+  </div>
+  <div class="evince-ng">
+     <div class="evince-ng-text">
+      <div class="job-img"></div>
+      <div class="job-details">
+        <p class="job-description">Software Developer <span>2018 - 2019</span></p>
+        <p>Evince Nigeria Limited</p>
+        <p>Lagos, Nigeria</p>
+      </div>  
+      <div class="more-icon" onmouseover="moreIconSugg()" onclick="moreEvOption()"></div>
+      <p id="more-icon-sugg">See options</p>
+       <div class="more-options">
+         <p>Edit position</p>
+         <p>Delete position</p>
+      </div>
+        <p class="evince-ng-text-body">Built, tested, and deployed scalable, highly available and modular JVM based enterprise software using Scala, Play framework, and Akka. Designed and developed enterprise based software using Python 2 and 3 with Django, supporting one of the largest GSM telcos in Nigeria. Developed service based MDA(message driven architecture) software with Scala based Lagom microservices. Oversaw major new enhancements to existing software systems, converting production software from monolith to service-based.</p>
+     </div>
+  </div>
+      <div class="freelancer">
+     <div class="freelancer-text">
+       <div class="job-img"></div>
+       <div class="job-details">
+        <p class="job-description">Associate Software Engineer <span>2016 - 2018</span></p>
+        <p>Freelancer</p>
+        <p>Lagos, Nigeria</p>
+      </div>
+      <div class="more-icon" onmouseover="moreIconFreeSugg()" onclick="moreFreeOption()"></div>
+      <p id="more-icon-sugg">See options</p>
+      <div class="more-options">
+         <p>Edit position</p>
+         <p>Delete position</p>
+      </div>
+        <p class="freelancer-text-body">Developed and managed desktop applications written in Java for various SMEs. Configured, installed, and tuned Java-based systems for performance in PostgreSQL databases. Automated and implemented backup and recovery procedures for inventory management systems that resulted in high software availability. Stored, retrieved, and manipulated data for close analysis of PostgreSQL database performance across specific periods. Consulted with network engineering staff to evaluate hardware and software requirements for new system development.</p>
+     </div>
+      </div>
+</div>
+
+<div class="edu">
+    <p class="add-edu" onclick="displayEduForm()"><span>+</span>Add</p>
+  <h2>Education</h2>
+  <form class="edu-form">
+    <label for="institute">Institution  <span>*</span></label>
+     <input type="text" name="institute" class="non-ins-empty" onclick="nonInsEmpty()">
+     <p class="error-ins-msg">Please provide non empty value for this field.</p>
+     <label for="major">Major</label>
+     <input type="text" name="major">
+     <label for="location">Location</label>
+     <input type="text" name="location">
+     <label for="description">Description</label>
+     <textarea name="description"></textarea>
+     <label for="from">From <span>*</span></label>
+     <input type="date" name="from">
+     <label for="to">To <span>*</span></label>
+     <input type="date" name="to">
+     <label for="check" class="check">
+      <input type="checkbox" name="check">
+      <span>I currently work here</span></label>
+       <div class="edu-update-btn">
+     <p class="edu-update-btn-no" onclick="removeEduForm()">Cancel</p>
+     <p class="edu-update-btn-yes">Save</p>
+  </div>
+     
+  </form>
+   <div class="institute">
+    <div class="edu-img"></div>
+    <div class="edu-details">
+     <p class="institute-name">Ogun state Institute of technology <span>2011 - 2018</span></p>
+     <p>Higher national diploma, Business studies</p>
+     <p>Lagos, Nigeria</p>
+   </div>
+   <div class="more-icon" onmouseover="moreIconEduSugg()" onclick="moreEduOption()"></div>
+   <p id="more-icon-sugg">See options</p>
+   <div class="more-options">
+         <p>Edit position</p>
+         <p>Delete position</p>
+      </div>
+   </div>
+</div>
+
+  <div class="skillset">
+   <div class="skills">       
+    <div class="skills-links">
+         <p class="cancel-form" onclick=" removeSkillsForm()">Cancel</p>
+        <p class="save-form">Save</p>
+    </div>
+
+        <p class="plus-sign" onclick="displaySkillsForm()">+</p>
+      <p class="skills-header">Skills <img src="img/black-info.png"></p>
+      <form class="skills-form">
+        <input type="text" name="search" placeholder="Skills(ex: Data analysis)">
+      </form>
+   </div>
+
+   <div class="languages">
+
+      <div class="languages-links">
+         <p class="cancel-form" onclick="removeLanguagesForm()">Cancel</p>
+        <p class="save-form">Save</p>
+    </div>
+
+    <p class="plus-sign" onclick="displayLanguagesForm()">+</p>
+     <p class="languages-header">Languages</p>
+     <form class="languages-form">
+         <input list="languages" name="languages">
+         <datalist id="languages">
+    <option>Afrikaans</option>  
+    <option>Amharic</option>
+    <option>Arabic</option>
+    <option>Armenian</option>
+    <option>Azerbaijani</option>
+    <option>Basque</option>
+    <option>Bengali</option>
+    <option>Bulgarian</option>
+    <option>Catalan</option>
+    <option>Chinese (Simplified)</option>
+    <option>Chinese (Traditional)</option>
+    <option>Croatian</option>
+    <option>Czech</option>
+    <option>Danish</option>
+    <option>Dutch</option>
+    <option>English</option>
+    <option>English (UK)</option>
+    <option>Estonian</option>
+    <option>Finnish</option>
+    <option>French</option>
+    <option>French (Canada)</option>
+    <option>Galician</option>
+    <option>Georgian</option>
+    <option>German</option>
+    <option>Greek</option>
+    <option>Gujarati</option>
+    <option>Hebrew</option>
+    <option>Hindi</option>
+    <option>Hungarian</option>
+    <option>Icelandic</option>
+    <option>Indonesian</option>
+    <option>Irish</option>
+    <option>Italian</option>
+    <option>Japanese</option>
+    <option>Kannada</option>
+    <option>Khmer</option>
+    <option>Korean</option>
+    <option>Lao</option>
+    <option>Latvian</option>
+    <option>Lithuanian</option>
+    <option>Malay</option>
+    <option>Malayalam</option>
+    <option>Marathi</option>
+    <option>Mongolian</option>
+    <option>Nepali</option>
+    <option>Norwegian</option>
+    <option>Persian</option>
+    <option>Pilipino</option>
+    <option>Polish</option>
+    <option>Portuguese</option>
+    <option>Portuguese (Brazil)</option>
+    <option>Romanian</option>
+    <option>Russian</option>
+    <option>Serbian</option>
+    <option>Sinhala</option>
+    <option>Slovak</option>
+    <option>Slovenian</option>
+    <option>Spanish</option>
+    <option>Spanish (Mexico)</option>
+    <option>Swahili</option>
+    <option>Swedish</option>
+    <option>Tamil</option>
+    <option>Telugu</option>
+    <option>Thai</option>
+    <option>Turkish</option>
+    <option>Ukrainian</option>
+    <option>Urdu</option>
+    <option>Vietnamese</option>
+    <option>Welsh</option>
+    <option>Zulu</option>
+         </datalist>
+         <select>
+           <option>Beginner</option>
+           <option>Intermediate</option>
+           <option>Professional</option>
+           <option>Native</option>
+         </select>
+      </form>
+      <img src="img/cancel-icon.png" class="cancel-icon" onclick="cancelLanguagesForm()">
+      <p class="add-lang" onclick="addLang()">+ Add language</p>
+   </div>
+
+   </div>
+
+
+   </div>
+</div>	
+
+<nav class="bottom-nav">
+
+    <div class="home">
+      <img src="img/home-icon.png">
+       <a href="home.html">Home</a>
+    </div>
+
+<div class="search">
+  <img src="img/search-icon.png">
+  <a href="search.html">Search</a>
+</div>
+
+ <div class="job">
+  <img src="img/work-icon.png">
+  <a href="job.html">My Jobs</a>
+</div>
+
+  <div class="s-prof" class="active-page">
+  <img src="img/white-profile-icon.png">
+  <a href="profile.html">SmartProfile</a>
+  </div>
+
+</nav>
+
+
+<script type="text/javascript" src="profile.js"></script>
+
+
+
+
+   
+</body>
+</html>

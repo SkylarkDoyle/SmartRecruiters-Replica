@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This is a website application that helps during job search">
+	<title>SmartRecruiters</title>
+	<link rel="shortcut icon" href="img/smartrecruiters_bulb_fav.png">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+    <div class="sticky">
+      <a href="">Feedback</a>
+  </div>
+
+
+    <div class="home-wrapper">
+    <!-- start of home page nav bar -->
+    	<div class="home-header">
+    		<a href="home.html" class="home-logo">
+    			<img src="img/smartrecruiters_bulb.png" class="icon-logo"> 
+    			<img src="img/smartrecruiters_medium.png" class="text-logo"></a>
+          <ul class="home-links">
+              <li><a href="home.html" class="active-page">Home</a></li>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="job.html">My Jobs</a></li>
+          </ul>
+    		<div class="home-nav-links">
+                 <img src="img/bell.png" class="bellImg" onclick="bellToggle()">
+                 <div class="notification">
+                  <div class="bell-logo"></div>
+                      <p class="notification-header">No notifications</p>
+                      <p class="notification-text">We'll notify you when a matching job arrives!</p>
+                 </div>
+
+            <div class="home-header-user" onclick="profileToggle()">
+                 <img src="img/avatar-placeholder.png">
+                 <p class="username">Olalekan Adebari</p>
+                 <img src="img/down-arrow.png" class="d-arr">
+                 <div class="user-profile">
+                   <h4>Olalekan Adebari</h4>
+                   <p>adebari.olalekan.oluwaseun@gmail.com</p>
+                   <a href="profile.html" class="user-smart-link">My SmartProfile</a>
+                   <ul>
+                     <li><a href="">Smart Job Search <span>NEW</span></a></li>
+                     <li class="hidden"><a href="search.html">Search</a></li>
+                     <li class="hidden"><a href="job.html">My Jobs</a></li>
+                     <li><a href="">Jobseeker Guide</a></li>
+                     <li><a href="settings.html">Settings</a></li>
+                     <li><a href="sign-in.html">Logout</a></li>
+                   </ul>
+                 </div>
+            </div>
+    		</div>
+    	</div>
+  	<!-- end of home page nav bar -->
+ <div class="smart-profile">
+      <div class="smart-profile-text">
+        <p>Keep your SmartProfile up to date so we can offer you the most relevant job opportunities.</p>
+      <h4>Your SmartProfile is 45% complete</h4>    
+      <div class="progress">
+          <div class="completion remain"></div>
+      </div>
+         <span>45%</span>
+          </div>  
+          <div class="smart-profile-btn">
+            <a href="profile.html">My SmartProfile</a>
+          </div>
+      
+ </div>
+
+
+
+
+ <div class="job-application-link">
+   <h2>My Job Applications</h2>      
+     <a href="">See all</a>
+ </div>
+      <div class="ev-application">
+           <img src="img/evolution.png">
+
+           <div class="ev-application-text">
+            <a href="">
+              <span>In review</span>
+               <p>Scala Engineer</p>
+               <div class="ev-loc">
+                  <p class="ev">Evolution</p>
+               <p class="loc">Riga, Latvia</p>
+               </div>
+            </a>
+           </div>
+      </div>   
+
+      <div class="sigma-application">
+           <img src="img/sigma.png">
+           <div class="sigma-application-text">
+            <a href="">
+              <span>New</span>
+               <p>Middle/Senior Scala Developer (Online Shopping Platform)</p>
+               <div class="sig-loc">
+                 <p class="sig">Sigma Software</p>
+                 <p class="loc">Lviv, Ukraine <img src="img/world.png"></p>
+               </div>
+            </a>
+
+           </div>
+      </div>  
+   <div class="jobseeker-link">
+   <h2>Jobseeker Guide</h2>      
+     <a href="">See all</a>
+ </div>
+    <div class="container">
+       <div class="proactive-guide">
+         <img src="img/proactive-guide.png">
+         <div class="proactive-guide-text">
+            <a href="">A Proactive Guide to Getting Happy at Work</a>
+              <p>Are you unhappy with your job, or finding it difficult to find your feet professionally? Life Coach Cilian Murphy has some proactive advice for how to steer your career towards a positive outcome.</p>
+              <ul>
+                <li>#happiness</li>
+                <li>#coaching</li>
+              </ul>
+         </div>
+     </div>
+      <div class="graduating-soon">
+         <img src="img/graduating-soon.png">
+         <div class="graduating-soon-text">
+            <a href="">Graduating Soon? Let’s Get You Ready for the Working World</a>
+              <p>Results are filling our headlines right now, from Olympics to Leaving Cert and A Levels. Column inches are filled with advice for those who have just received exam results, and are deciding on their next steps after school. But what about people about to be spit out at the other end of the university conveyor belt?</p>
+              <ul>
+                <li>#graduate</li>
+                <li>#university</li>
+                <li>#career</li>
+              </ul>
+         </div>
+     </div>
+
+    </div>
+    
+
+
+</div>	
+<nav class="bottom-nav">
+
+    <div class="home">
+      <img src="img/white-home-icon.png">
+       <a href="home.html">Home</a>
+    </div>
+
+<div class="search">
+  <img src="img/search-icon.png">
+  <a href="search.html">Search</a>
+</div>
+
+ <div class="job">
+  <img src="img/work-icon.png">
+  <a href="job.html">My Jobs</a>
+</div>
+
+  <div class="s-prof">
+  <img src="img/profile-icon.png">
+  <a href="profile.html">SmartProfile</a>
+  </div>
+
+</nav>
+
+
+<script type="text/javascript" src="home.js"></script>
+
+
+
+
+   
+</body>
+</html>

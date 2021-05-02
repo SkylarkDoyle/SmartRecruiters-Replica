@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This is a website application that helps during job search">
+	<title>SmartRecruiters</title>
+    <link rel="shortcut icon" href="img/smartrecruiters_bulb_fav.png">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="sign-in.css">
+</head>
+<body>
+   <div class="signin-wrapper">
+           	  <div class="signin-header">
+                 <img src="img/landing-auth.png">
+           	  	 <h1>Welcome to SmartRecruiters!</h1>
+                 <div class="signin-header-brand">
+                   <p>We’ve simplified your job search! With your account, you can:</p>
+                   <ul>
+                     <li><strong> TRACK</strong> your job applications</li>
+                     <li><strong> COMMUNICATE </strong>directly with the hiring team  </li>
+                     <li> <strong>UPDATE</strong> your SmartProfile to put your best foot forward</li>
+                     <li><strong>CONTROL </strong>your data and privacy settings</li>
+                   </ul>
+                 </div>
+           	  </div>
+          <form  action="" class="signin-form" method="post" onsubmit="return validation()">
+          	<h1>Sign In</h1>
+            <p>Sign in with</p>
+            <div class="sm-links">
+                 <a href=""><img src="img/linkedin.png"></a>
+                 <a href=""><img src="img/google.png"></a>
+                 <a href=""><img src="img/facebook.png"></a>
+            </div>
+            <div class="divider">
+               <span>or</span>
+            </div>           
+          	<label for="first">Email</label>
+          	<input type="email" name="email" class="email">
+            <p class="error-msg">Please Type Your Email!</p>
+          	<label for="pwd">Password</label>
+          	<input type="password" name="pwd" class="pwd">
+  
+          	<button>Sign in</button>
+           <a href="sign-up.html">Get started now</a>
+           <a href="forgot-pwd.html" class="reset-pwd">Reset password</a>
+          </form>
+      <img src="img/smartrecruiters_medium.png" class="text-logo">
+   </div>
+   <footer>
+   </footer>
+
+
+</body>
+
+  
+  <!--  Script for input bg-color and outline --> 
+ <script type="text/javascript" src="sign-in.js">
+
+ </script>
+
+
+</html>

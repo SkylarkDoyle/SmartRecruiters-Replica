@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This is a website application that helps during job search">
+	<title>SmartRecruiters</title>
+	<link rel="shortcut icon" href="img/smartrecruiters_bulb_fav.png">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="settings.css">
+</head>
+<body>
+
+    <div class="setting-wrapper">
+    <!-- start of setting page nav bar -->
+    	<div class="setting-header">
+    		<a href="home.html" class="setting-logo">
+    			<img src="img/smartrecruiters_bulb.png" class="icon-logo"> 
+    			<img src="img/smartrecruiters_medium.png" class="text-logo"></a>
+          <ul class="setting-links">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="job.html">My Jobs</a></li>
+          </ul>
+    		<div class="setting-nav-links">
+                 <img src="img/bell.png" class="bellImg" onclick="bellToggle()">
+                 <div class="notification">
+                   <div class="bell-logo"></div>
+                      <p class="notification-header">No notifications</p>
+                      <p class="notification-text">We'll notify you when a matching job arrives!</p>
+                 </div>
+
+            <div class="setting-header-user" onclick="settingToggle()">
+                 <img src="img/avatar-placeholder.png">
+                 <p class="username">Olalekan Adebari</p>
+                 <img src="img/down-arrow.png" class="d-arr">
+                 <div class="user-setting">
+                   <h4>Olalekan Adebari</h4>
+                   <p>adebari.olalekan.oluwaseun@gmail.com</p>
+                   <a href="profile.html" class="user-smart-link">My SmartProfile</a>
+                   <ul>
+                     <li><a href="">Smart Job Search <span>NEW</span></a></li>
+                     <li class="hidden"><a href="search.html">Search</a></li>
+                     <li class="hidden"><a href="job.html">My Jobs</a></li>
+                     <li><a href="">Jobseeker Guide</a></li>
+                     <li><a href="settings.html">Settings</a></li>
+                     <li><a href="sign-in.html">Logout</a></li>
+                   </ul>
+                 </div>
+            </div>
+    		</div>
+    	</div>
+    </div>
+  	<!-- end of setting page nav bar -->
+
+<!-- preferences -->
+  <div class="settings-wrapper">
+    
+
+<div class="pref">
+   <h2>Preferences</h2>
+   <div class="pref-box">
+      <img src="img/planet.png">
+      <p>Change language</p>
+      <form class="pref-box-form">
+        <select>
+    <option>English</option>
+    <option>Afrikaans</option>  
+    <option>Bahasa Indonesia</option>
+    <option>Čeština</option>
+    <option>Dansk</option>
+    <option>Deutsch</option>
+    <option>Español</option>
+    <option>Español(Mexico)</option>
+    <option>Français</option>
+    <option>Français (Canada)</option>
+    <option>Italiano</option>
+    <option>Lietuvių</option>
+    <option>Hrvatski</option>
+    <option>Magyar</option>
+    <option>Mongolian</option>
+    <option>Nederlands</option>
+    <option>Norsk (Bokmål)</option>
+    <option>Polski</option>
+    <option>Portuguese</option>
+    <option>Portuguese (Brazil)</option>
+    <option>Romana</option>
+    <option>Slovenčina</option>
+    <option>Srpski</option>
+    <option>Suomi</option>
+    <option>Svenska</option>
+    <option>Tiếng Việt</option>
+    <option>Türkçe</option>
+    <option>Русский</option>
+    <option>Български</option>
+    <option>Български</option>
+    <option>العربية‬‎</option>
+    <option>עברית</option>
+    <option>日本語</option>
+    <option>中文 (简体)</option>
+    <option>中文 (简体)</option>
+    <option>ไทย</option>
+         </select>
+     </form>
+   </div>
+    
+</div>
+
+  <div class="privacy">
+      <h2>Privacy</h2>
+
+ <div class="change-pwd-box">
+  <img src="img/lock.png">
+  <p>Change my password</p>
+</div>
+
+      <div class="cookies">
+      <img src="img/cookie.png">
+      <p>Cookies settings</p>
+    </div>
+
+   <div class="export">
+     <img src="img/upload-icon.png">
+     <p>Export my SmartProfile data</p>
+   </div>
+
+  <div class="delete">
+    <img src="img/person-remove.png">
+    <p>Delete my SmartRecruiters account</p>
+    <span>Logout</span>
+  </div>
+
+   <div class="review">
+    <img src="img/case.png">
+    <p>Review my Archived Jobs</p>
+  </div>
+
+  </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="bottom-nav">
+
+    <div class="home">
+      <img src="img/home-icon.png">
+       <a href="home.html">Home</a>
+    </div>
+
+<div class="search">
+  <img src="img/search-icon.png">
+  <a href="search.html">Search</a>
+</div>
+
+ <div class="job">
+  <img src="img/work-icon.png">
+  <a href="job.html">My Jobs</a>
+</div>
+
+  <div class="s-prof" class="active-page">
+  <img src="img/profile-icon.png">
+  <a href="profile.html">SmartProfile</a>
+  </div>
+
+</nav>
+
+
+<script type="text/javascript" src="settings.js"></script>
+
+
+
+
+   
+</body>
+</html>

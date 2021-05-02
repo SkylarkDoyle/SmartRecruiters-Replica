@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This is a website application that helps during job search">
+  <title>SmartRecruiters</title>
+  <link rel="shortcut icon" href="img/smartrecruiters_bulb_fav.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="job.css">
+</head>
+<body>
+
+    <div class="job-wrapper">
+    <!-- start of job page nav bar -->
+      <div class="job-header">
+        <a href="home.html" class="job-logo">
+          <img src="img/smartrecruiters_bulb.png" class="icon-logo"> 
+          <img src="img/smartrecruiters_medium.png" class="text-logo"></a>
+          <ul class="job-links">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="job.html" class="active-page">My Jobs</a></li>
+          </ul>
+        <div class="job-nav-links">
+                 <img src="img/bell.png" class="bellImg" onclick="bellToggle()">
+                 <div class="notification">
+                   <div class="bell-logo"></div>
+                      <p class="notification-header">No notifications</p>
+                      <p class="notification-text">We'll notify you when a matching job arrives!</p>
+                 </div>
+
+            <div class="job-header-user" onclick="jobToggle()">
+                 <img src="img/avatar-placeholder.png">
+                 <p class="username">Olalekan Adebari</p>
+                 <img src="img/down-arrow.png" class="d-arr">
+                 <div class="user-job">
+                   <h4>Olalekan Adebari</h4>
+                   <p>adebari.olalekan.oluwaseun@gmail.com</p>
+                   <a href="profile.html" class="user-smart-link">My SmartProfile</a>
+                   <ul>
+                     <li><a href="">Smart Job Search <span>NEW</span></a></li>
+                     <li class="hidden"><a href="search.html">Search</a></li>
+                     <li class="hidden"><a href="job.html">My Jobs</a></li>
+                     <li><a href="">Jobseeker Guide</a></li>
+                     <li><a href="settings.html">Settings</a></li>
+                     <li><a href="sign-in.html">Logout</a></li>
+                   </ul>
+                 </div>
+            </div>
+        </div>
+         </div>
+     
+<!-- end of job page nav bar -->
+
+<div class="job-container">
+   <ul class="nav-lists">
+      <li id="saved" onclick="scrollDivClick()">Saved Jobs</li>
+      <li id="my-app" onclick="scrollDivAppClick()">My Applications</li>
+      <span onclick="plusAddForm()" class="plus-add">+</span>
+      <p class="add-form" onclick="displayExtForm()">Add external job</p>
+   </ul> 
+     <div class="ext">
+       <p>You can now save automatically any job you like on the web with a simple click. <span>Learn more</span></p>
+      <a href="">Download extension</a>
+      <img src="img/cancel-icon.png">
+     </div> 
+ <form class="add-ext-form">
+  <h2>Add external job</h2>
+  <p>Add a job manually from any job board in the web</p>
+  <label for="comp" >Company <span>*</span></label>
+  <input type="text" name="comp" placeholder="Company">
+  <label for="job-title">Job Title <span>*</span></label>
+  <input type="text" name="job-title" placeholder="Job Title">
+  <label for="url">URL / Application link</label>
+  <input type="text" name="url" placeholder="https://...">
+  <h4 class="show-more" onclick="displayMoreInputs()">Show more</h4>
+  <div class="more-inputs">
+    <label for="ind">Industry</label>
+    <select name="ind">
+      <option>Select</option>
+    </select>
+    <label for="emp-type">Employment Type</label>
+    <select name="emp-type">
+      <option>Select</option>
+    </select>
+    <label for="snr">Seniority</label>
+    <select name="snr">
+      <option>Select</option>
+    </select>
+    <label for="date">Posted Date</label>
+    <input type="date" name="date" placeholder="Pick a date">
+    <label for="loc">Location</label>
+    <input type="text" name="loc" placeholder="Location">
+    <label for="description">Description</label>
+    <textarea name="description" placeholder="Enter a description here"></textarea>
+    <label for="job-saved">Where do you want this job to be saved?</label>
+    <select name="job-saved">
+      <option>Favorites</option>
+      <option>Interested</option>
+      <option>Maybe</option>
+    </select>
+    <h4 class="show-less" onclick="removeMoreInputs()">Show less</h4>
+  </div>
+  <div class="btns">
+     <h5 class="btn-one" onclick="removeExtForm()">Cancel</h5>
+     <h5 class="btn-two">Add</h5>
+  </div>
+ </form>
+
+ <div class="scroll-div">
+   <div class="divs">
+     <h3>FAVORITES<span>0</span><img src="img/more-icon.png"></h3>
+     
+     <p>No jobs added</p>
+
+   </div>
+   <div class="divs">
+    <h3>INTERESTED<span>0</span><img src="img/more-icon.png"></h3>
+    <p>No jobs added</p>
+  </div>
+   <div class="divs">
+    <h3>MAYBE <span>0</span><img src="img/more-icon.png"></h3>
+    <p>No jobs added</p>
+  </div>
+ </div>
+
+ <div class="scroll-div-application">
+   <div class="divs">
+     <h3>APPLIED<span>1</span><img src="img/more-icon.png"></h3>
+     <div class="works">
+      <div class="tooltip">
+          <p>This job was applied from your <br>SmartRecruiters account, 
+          when <br>recruiters update your application status <br>your tile will move</p>
+      </div>
+       <img src="img/smartrecruiters_bulb_fav.png" class="logo" onmouseover="toolTipInfo()">
+       <img src="img/more-icon.png" class="more">
+       <img src="img/sigma.png" class="org-logo">
+       <h6>Middle/Senior Scala <br>Developer (Online...<br>
+      <span style="margin-left: 60px;">Sigma Software</span>
+    </h6>
+     </div>
+   </div>
+
+   <div class="divs">
+    <h3>IN REVIEW<span>1</span><img src="img/more-icon.png"></h3>
+    <div class="works">
+      <div class="tooltip-two">
+          <p>This job was applied from your <br>SmartRecruiters account, 
+          when <br>recruiters update your application status <br>your tile will move</p>
+      </div>
+       <img src="img/smartrecruiters_bulb_fav.png" class="logo logo-two" onmouseover="toolTipTwoInfo()">
+       <img src="img/more-icon.png" class="more">
+       <img src="img/evolution.png" class="org-logo">
+       <h6>Scala Engineer <br><span>Evolution</span></h6>
+     </div>
+  </div>
+
+   <div class="divs">
+    <h3>INTERVIEW <span>0</span><img src="img/more-icon.png"></h3>
+    <p class="para">No jobs added</p>
+  </div>
+
+  <div class="divs">
+    <h3>OFFER <span>0</span><img src="img/more-icon.png"></h3>
+    <p class="para">No jobs added</p>
+  </div>
+ </div>
+
+
+</div>
+
+</div>
+
+
+<nav class="bottom-nav">
+
+    <div class="home">
+      <img src="img/home-icon.png">
+       <a href="home.html">Home</a>
+    </div>
+
+<div class="search">
+  <img src="img/search-icon.png">
+  <a href="search.html">Search</a>
+</div>
+
+ <div class="job">
+  <img src="img/work-icon.png">
+  <a href="job.html">My Jobs</a>
+</div>
+
+  <div class="s-prof">
+  <img src="img/profile-icon.png">
+  <a href="profile.html">SmartProfile</a>
+  </div>
+
+</nav>
+
+
+<script type="text/javascript" src="job.js"></script>
+
+
+
+
+   
+</body>
+</html>
